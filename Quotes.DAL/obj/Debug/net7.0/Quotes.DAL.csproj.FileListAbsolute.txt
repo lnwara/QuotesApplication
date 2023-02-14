@@ -1,0 +1,17 @@
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/bin/Debug/net7.0/Quotes.DAL.deps.json
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/bin/Debug/net7.0/Quotes.DAL.runtimeconfig.json
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/bin/Debug/net7.0/Quotes.DAL.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/bin/Debug/net7.0/Quotes.DAL.pdb
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/bin/Debug/net7.0/Quotes.Models.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/bin/Debug/net7.0/Quotes.Models.pdb
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.csproj.AssemblyReference.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.AssemblyInfoInputs.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.AssemblyInfo.cs
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.csproj.CoreCompileInputs.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.csproj.CopyComplete
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/refint/Quotes.DAL.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.pdb
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/Quotes.DAL.genruntimeconfig.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.DAL/obj/Debug/net7.0/ref/Quotes.DAL.dll

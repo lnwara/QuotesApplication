@@ -1,0 +1,12 @@
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/bin/Debug/net7.0/Quotes.Utilities.deps.json
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/bin/Debug/net7.0/Quotes.Utilities.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/bin/Debug/net7.0/Quotes.Utilities.pdb
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.csproj.AssemblyReference.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.AssemblyInfoInputs.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.AssemblyInfo.cs
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.csproj.CoreCompileInputs.cache
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/refint/Quotes.Utilities.dll
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/Quotes.Utilities.pdb
+/Users/noorshaker/Projects/QuotesApplication/Quotes.Utilities/obj/Debug/net7.0/ref/Quotes.Utilities.dll

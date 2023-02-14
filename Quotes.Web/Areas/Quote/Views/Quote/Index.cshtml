@@ -1,0 +1,155 @@
+﻿@model Quotes.Web.Views.Quote.IndexModel
+@{
+}
+
+<div class="main-container">
+    <div class="heading row">
+        <h1 class="heading__title col-sm">Quotes</h1>
+        <div class="col-6 text-end">
+            <a asp-controller="Quote" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Create New Quote
+            </a>
+        </div>
+    </div>
+  
+            <div class="q-content">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <select class="form-select" id="authors" asp-for="@Model.AuthorId" asp-items="Model.Authors" onchange="filter()">
+                            <option disabled selected>--Select Author--</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <a id="RandomQuote" class="btn btn-primary">
+                            &nbsp; Random Quote
+                        </a>
+                    </div>
+                </div>
+                <div id="divPartial">
+                    @Html.Partial("_Quotes", Model.Quotes)
+                </div>
+                <div id="dialog" style="display:none;" class="dialog-card">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3 style="color: #f29d79;">Random Quote</h3>
+                        </div>
+                        <div class="col-sm">
+                            <a onclick="hideDialog()"> <i class="bi bi-x-lg"></i></a>
+                        </div>
+                    </div>
+
+                    <p id="dialogText" class="dialogText"></p>
+                </div>
+            </div>
+   
+
+    <div id="confirmdialog" style="display:none;" class="dialog-card">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 style="color: #f29d79;">Are you sure ? </h3>
+                    <h5>All authors' related quotes will be deleted. </h5>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm">
+                    <a id="yes" class="btn btn-primary"> Yes </a>
+                </div>
+                <div class="col-sm">
+                    <a onclick="hideConfirmDialog()" class="btn btn-primary"> Cancel </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="snackbar" style="display:none;">Deleted Successfuly</div>
+
+
+@section Scripts{
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>function filter() {
+    $('#divPartial').load('/Quote/Quote/QuotePartialView?authorId=' + $("#authors").val());
+        }
+
+        $("#RandomQuote").on('click', function () {
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetRandomQuote", "Quote")",
+                async: false,
+                success: function (data) {
+                    debugger;
+                    $("#dialogText").text(data);
+                }
+            });
+
+
+            $(function () {
+                $("#dialog").css('display', 'block');
+                $("#dialog").dialog
+                    (
+                    );
+            });
+        });
+
+
+        function hideDialog()
+        {
+            $("#dialog").hide();
+        }
+
+
+
+        function hideConfirmDialog() {
+            $("#confirmdialog").hide();
+        }
+
+
+     function remove(id)
+     {
+         $("#confirmdialog").dialog
+             (
+             );
+         $("#confirmdialog").css('display', 'block');
+
+         $("#yes").click(function ()
+         {
+             $("#confirmdialog").hide();
+             $.ajax({
+                type: "POST",
+                url: "@Url.Action("Remove", "Quote")",
+                async: false,
+                data: {
+                    Id: id
+
+                },
+                 success: function (data) {
+                     
+                     $("#snackbar").css('display', 'block');
+                     setTimeout(function () { $("#snackbar").css('display', 'none'); }, 3000);
+
+                     $('#divPartial').load('/Quote/Quote/QuotePartialView');
+                }
+            });
+
+             });
+
+     }
+
+
+
+
+    </script>
+
+
+}
+
+
+

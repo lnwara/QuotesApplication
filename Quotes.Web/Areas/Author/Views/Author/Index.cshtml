@@ -1,0 +1,95 @@
+﻿@model IEnumerable<AuthorModel>
+@{
+    ViewData["Title"] = "Authors";
+}
+
+
+<div class="main-container">
+    <div class="heading row">
+        <h1 class="heading__title col-sm">Quote Authors</h1>
+        <div class="col-6 text-end">
+            <a asp-controller="Author" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Create New Author
+            </a>
+        </div>
+    </div>
+
+    <div id="dialog" style="display:none;" class="dialog-card">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 style="color:#f29d79;">Are you sure ? </h3>
+                    <h5>All authors' related quotes will be deleted. </h5>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm">
+                    <a id="yes" class="btn btn-primary"> Yes </a>
+                </div>
+                <div class="col-sm">
+                    <a onclick="hideDialog()" class="btn btn-primary"> Cancel </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @if (Model.Count() > 0)
+    {
+        <div id="divPartial">
+            @Html.Partial("_authors", Model)
+        </div>
+    }
+
+
+</div>
+
+<div id="snackbar" style="display:none;">Deleted Successfuly</div>
+
+
+@section Scripts{
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+
+     function remove(id)
+     {
+         $("#dialog").dialog
+             (
+             );
+         $("#dialog").css('display', 'block');
+
+         $("#yes").click(function ()
+         {
+             $("#dialog").hide();
+                $.ajax({
+                type: "POST",
+                url: "@Url.Action("Remove", "Author")",
+                async: false,
+                data: {
+                    Id: id
+
+                },
+                    success: function (data) {
+                        $("#snackbar").css('display', 'block');
+                        setTimeout(function () { $("#snackbar").css('display', 'none'); }, 3000);
+                    $('#divPartial').load('/Author/Author/AuthorPartialView');
+
+                }
+            });
+
+             });
+
+     }
+
+
+
+    function hideDialog() {
+        $("#dialog").hide();
+    }
+
+    </script>
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Quotes.Models/1.0.0": {
+        "runtime": {
+          "Quotes.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Quotes.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

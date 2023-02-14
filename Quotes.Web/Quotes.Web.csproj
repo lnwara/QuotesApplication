@@ -47,5 +47,13 @@
     <Folder Include="Areas\Quote\Views\" />
     <Folder Include="Areas\Quote\Views\Quote\" />
     <Folder Include="Areas\Author\Views\Author\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Images\" />
+    <Content Remove="wwwroot\Images\QuotesApp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\QuotesApp.png" />
   </ItemGroup>
 </Project>
